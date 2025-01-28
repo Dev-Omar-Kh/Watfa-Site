@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.container{
+
+    width: 100%;
+    min-height: calc(100svh - 102px);
+    padding: 50px 4.5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+
+.column_view{
+
+    display: none;
+
+}
+
+.content_side{
+
+    max-width: calc(100% - 700px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.content_p{
+
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 44.8px;
+    font-family: "Manrope", serif;
+    color: var(--dark-gray-color);
+
+}
+
+.img_side{
+
+    position: relative;
+    width: 600px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.dash_bg{
+
+    position: relative;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 2px dashed var(--pink-color);
+
+}
+
+.dash_bg img{
+
+    position: absolute;
+    top: -60px;
+    width: 130px;
+
+}
+
+.color_bg{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border-radius: 50%;
+    background-color: var(--pink-color);
+    opacity: 32%;
+
+}
+
+.main_img{
+
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 600px;
+
+}
+
+.f_star{
+
+    position: absolute;
+    top: -30px;
+
+}
+
+.s_star{
+
+    position: absolute;
+    bottom: -30px;
+
+}
+
+.price_box{
+
+    position: absolute;
+    bottom: -30px;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 1240px){
+
+    .content_side{
+
+        max-width: calc(100% - 600px);
+
+    }
+
+}
+
+@media only screen and (max-width: 1055px){
+
+    .container{
+
+        flex-direction: column-reverse;
+        gap: 50px;
+
+    }
+
+    .content_side{
+
+        max-width: 100%;
+
+    }
+
+    .img_side{
+
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .main_img{
+
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+}
+
+@media only screen and (max-width: 1055px) and (min-width: 590px){
+
+    .column_view{
+
+        width: 100%;
+        display: block;
+
+    }
+
+    .row_view{
+
+        display: none;
+
+    }
+
+}
+
+@media only screen and (max-width: 590px){
+
+    .column_view{
+
+        display: none;
+
+    }
+
+    .img_side{
+
+        display: none;
+
+    }
+
+}

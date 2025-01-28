@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.container{
+
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container p{
+
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 80px;
+    white-space: nowrap;
+    color: var(--black-color);
+    font-family: "Quicksand", serif;
+
+}
+
+.right_side_title{
+
+    position: relative;
+
+}
+
+.right_side_title svg{
+
+    position: absolute;
+    bottom: -20px;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 590px) {
+
+    .container p{
+
+        font-size: 2.5rem;
+        line-height: 50px;
+
+    }
+
+}
