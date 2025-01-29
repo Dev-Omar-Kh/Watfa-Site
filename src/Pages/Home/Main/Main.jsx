@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Title from '../../../Components/Title/Title';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -12,6 +12,16 @@ import mainCSS from './main.module.css';
 export default function Main() {
 
     const {t, i18n} = useTranslation();
+
+    // ====== check-language ====== //
+
+    const [isEnglish, setIsEnglish] = useState(i18n.language === 'en');
+
+    useEffect(() => {
+
+        setIsEnglish(i18n.language === 'en')
+
+    } , [i18n.language])
 
     // ====== animation ====== //
 
@@ -77,14 +87,15 @@ export default function Main() {
 
                     <motion.img
                         variants={repeatBasketVariants} initial='hidden' animate='visible'
-                        style={i18n.language === 'en' ? {right: '-30px'} : {left: '-30px'}}
+                        style={isEnglish ? {right: '-30px'} : {left: '-30px'}}
                         src={basketImg} alt="small basket" 
                     />
 
                     <motion.svg 
+                        key={isEnglish ? 'en1' : 'ar1'}
                         className={mainCSS.f_star}
                         variants={fRepeatStarVariants} initial='hidden' animate='visible'
-                        style={i18n.language === 'en' ? {left: '-30px'} : {right: '-30px'}}
+                        style={isEnglish ? {left: '-30px'} : {right: '-30px'}}
                         width="84" height="84" 
                         viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg"
                     >
@@ -92,9 +103,10 @@ export default function Main() {
                     </motion.svg>
 
                     <motion.svg 
+                        key={isEnglish ? 'en2' : 'ar2'}
                         className={mainCSS.s_star} 
                         variants={sRepeatStarVariants} initial='hidden' animate='visible'
-                        style={i18n.language === 'en' ? {right: '-30px'} : {left: '-30px'}}
+                        style={isEnglish ? {right: '-30px'} : {left: '-30px'}}
                         width="59" height="59" 
                         viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg"
                     >
@@ -104,7 +116,7 @@ export default function Main() {
                     <motion.svg 
                         className={mainCSS.price_box}
                         variants={repeatVariants} initial='hidden' animate='visible'
-                        style={i18n.language === 'en' ? {left: '-30px'} : {right: '-30px'}}
+                        style={isEnglish ? {left: '-30px'} : {right: '-30px'}}
                         width="147" height="88" 
                         viewBox="0 0 147 88" fill="none" xmlns="http://www.w3.org/2000/svg"
                     >
@@ -118,9 +130,9 @@ export default function Main() {
 
                 </div>
 
-                <img
+                <motion.img
                     className={mainCSS.main_img}
-                    src={i18n.language === 'en' ? mainImg : mainImgLtf} alt="main section" 
+                    src={isEnglish ? mainImg : mainImgLtf} alt="main section" 
                 />
 
             </div>
