@@ -20,6 +20,9 @@
     --violet-color: #523364;
     --dark-gray-color: #656565;
     --light-gray-color: #A6A6A6;
+    --darker-gray-color: #3F3F3F;
+    --lighter-gray-color: #909090;
+
     --light-violet-color: rgba(82, 51, 100, 0.05);
 
 }
@@ -64,5 +67,12 @@ a {
 .nav_bar_links.active{
 
     color: var(--pink-color);
+
+}
+
+.common_cont{
+
+    width: 100%;
+    padding: 50px 4.5%;
 
 }

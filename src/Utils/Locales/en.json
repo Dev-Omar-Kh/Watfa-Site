@@ -11,6 +11,20 @@
     "englishWord": "English",
 
     "welcomeToWord": "Welcome To",
-    "introWatfa": "At Watfa, shopping should bring joy, not financial pressure. Our Buy Now, Pay Later (BNPL) is crafted exclusively for women, offering a tailored and secure shopping experience. Whether it's fashion, beauty, or wellness, Watfa helps you indulge in what you love without upfront payments."
+    "introWatfa": "At Watfa, shopping should bring joy, not financial pressure. Our Buy Now, Pay Later (BNPL) is crafted exclusively for women, offering a tailored and secure shopping experience. Whether it's fashion, beauty, or wellness, Watfa helps you indulge in what you love without upfront payments.",
+
+    "whyChooseWord": "Why Choose",
+
+    "whyCardsTitle1": "Rewards and Cashbacks",
+    "whyCardsTitle2": "Smart Digital Wallet",
+    "whyCardsTitle3": "Enhanced Security",
+    "whyCardsTitle4": "Interest-Free Installments",
+    "whyCardsTitle5": "Personalized Shopping Experience",
+
+    "whyCardsDescription1": "Earn rewards and unlock exclusive discounts with every purchase, making each transaction more rewarding.",
+    "whyCardsDescription2": "Keep your payment methods securely stored and track your spending seamlessly through our app.",
+    "whyCardsDescription3": "Watfa ensures that your data is protected with advanced encryption, letting you shop confidently.",
+    "whyCardsDescription4": "Pay over three months or make a single payment within 25 days—no hidden fees.",
+    "whyCardsDescription5": "Explore curated fashion, beauty, and wellness collections designed for your unique style."
 
 }

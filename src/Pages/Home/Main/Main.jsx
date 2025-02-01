@@ -47,7 +47,7 @@ export default function Main() {
 
     const repeatBasketVariants = {
 
-        hidden : {rotate: '-40deg'},
+        hidden : {rotate: '-20deg'},
         visible : {
             rotate: '0deg' , 
             transition : {type : 'wheel' , duration : 4 , repeat : Infinity , repeatType : 'mirror'}
@@ -72,7 +72,7 @@ export default function Main() {
             <div className={mainCSS.content_side}>
 
                 <div className={mainCSS.row_view}>
-                    <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} />
+                    <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} svgType={'main'} />
                 </div>
 
                 <p className={mainCSS.content_p}>{t('introWatfa')}</p>
@@ -138,7 +138,7 @@ export default function Main() {
             </div>
 
             <div className={mainCSS.column_view}>
-                <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} />
+                <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} svgType={'main'} />
             </div>
 
         </div>

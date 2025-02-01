@@ -30,7 +30,7 @@
 .right_side_title svg{
 
     position: absolute;
-    bottom: -20px;
+    overflow: visible;
 
 }
 
