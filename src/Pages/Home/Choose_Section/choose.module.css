@@ -13,3 +13,31 @@
     gap: 20px;
 
 }
+
+.link_box{
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.link_box a{
+
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--pink-color);
+    transition: 0.3s;
+
+    &:hover{
+
+        scale: 0.95;
+
+    }
+
+}

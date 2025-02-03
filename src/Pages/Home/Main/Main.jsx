@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import mainImg from '../../../Images/main_img.png'
 import mainImgLtf from '../../../Images/main_img_ltr.png';
 import basketImg from '../../../Images/basket_img.png';
+import appStore from '../../../Images/SVG/app-store-img.svg';
+import googlePlay from '../../../Images/SVG/google-play-img.svg';
 
 import mainCSS from './main.module.css';
 
@@ -67,7 +69,7 @@ export default function Main() {
 
     return <React.Fragment>
 
-        <div className={mainCSS.container}>
+        <main className={mainCSS.container}>
 
             <div className={mainCSS.content_side}>
 
@@ -76,6 +78,13 @@ export default function Main() {
                 </div>
 
                 <p className={mainCSS.content_p}>{t('introWatfa')}</p>
+
+                <div className={mainCSS.download_app_cont}>
+
+                    <img src={appStore} alt="" />
+                    <img src={googlePlay} alt="" />
+
+                </div>
 
             </div>
 
@@ -141,7 +150,7 @@ export default function Main() {
                 <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} svgType={'main'} />
             </div>
 
-        </div>
+        </main>
 
     </React.Fragment>
 

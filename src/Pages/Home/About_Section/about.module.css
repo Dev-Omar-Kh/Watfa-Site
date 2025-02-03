@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.container{
+
+    padding-top: 0px !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow-x: hidden;
+
+}
+
+.column_view{
+
+    display: none;
+
+}
+
+.img_side{
+
+    width: 500px;
+    height: 567px;
+
+}
+
+.img_cont{
+
+    position: relative;
+    width: 390px;
+    height: 100%;
+    padding: 10px;
+    border-top-left-radius: 432.5px;
+    border-top-right-radius: 432.5px;
+    border: 4px solid var(--pink-color);
+
+}
+
+.img_bg{
+
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 432.5px;
+    border-top-right-radius: 432.5px;
+    background-color: var(--pink-color);
+    overflow: hidden;
+
+}
+
+.img_cont .main_img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.stars{
+
+    position: absolute;
+
+}
+
+.star_1{
+
+    width: 63px;
+    height: 63px;
+    top: 15px;
+    right: 35px;
+
+}
+
+.star_2{
+
+    width: 47px;
+    height: 47px;
+    top: 150px;
+    left: -40px;
+
+}
+
+.star_3{
+
+    width: 28px;
+    height: 28px;
+    top: 220px;
+    right: -9px;
+
+}
+
+.content_side{
+
+    width: calc(100% - 500px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.content_p{
+
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 44.8px;
+    font-family: "Quicksand", serif;
+    color: var(--dark-gray-color);
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 990px){
+
+    .container{
+
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    .column_view{
+
+        width: 100%;
+        display: block;
+
+    }
+
+    .row_view{
+
+        display: none;
+
+    }
+
+    .img_side{
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .content_side{
+
+        width: 100%;
+
+    }
+
+}
+
+@media only screen and (max-width: 520px){
+
+    .img_side{
+
+        height: 378px;
+
+    }
+
+    .img_cont{
+
+        width: 260px;
+
+    }
+
+    .star_1{
+
+        width: 42px;
+        height: 42px;
+
+    }
+
+    .star_2{
+
+        width: 31px;
+        height: 31px;
+
+    }
+
+    .star_3{
+
+        width: 19px;
+        height: 19px;
+
+    }
+
+}
