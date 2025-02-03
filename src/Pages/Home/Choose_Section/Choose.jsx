@@ -102,7 +102,7 @@ export default function Choose() {
 
                 <div className={`${cardBoxCSS.container} ${chooseCSS.link_box}`}>
                     <a href="https://play.google.com/store/games?hl=en" target='_blank' rel="noreferrer">
-                        <p>Shop Now</p>
+                        <p>{t('shopNowWord')}</p>
                         <svg 
                             width="17" height="11" 
                             style={i18n.language === 'ar' ? {transform: 'rotateY(180deg)'} : {}}

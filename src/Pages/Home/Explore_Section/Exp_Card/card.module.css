@@ -61,11 +61,17 @@
 
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 550px){
 
-    .container{
+    /* .container{
 
         width: 100%;
+
+    } */
+
+    .content_side p{
+
+        font-size: 1.15rem;
 
     }
 

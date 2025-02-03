@@ -1,14 +1,18 @@
 import React from 'react';
-
-import exploreCSS from './explore.module.css';
 import Title from '../../../Components/Title/Title';
 import { useTranslation } from 'react-i18next';
+import Card from './Exp_Card/Card';
 
 import expImg1 from '../../../Images/SVG/exp_img_1.svg';
 import expImg2 from '../../../Images/SVG/exp_img_2.svg';
 import expImg3 from '../../../Images/SVG/exp_img_3.svg';
 import expImg4 from '../../../Images/SVG/exp_img_4.svg';
-import Card from './Exp_Card/Card';
+import expImg5 from '../../../Images/SVG/exp_img_5.svg';
+import expImg6 from '../../../Images/SVG/exp_img_6.svg';
+import expImg7 from '../../../Images/SVG/exp_img_7.svg';
+import expImg8 from '../../../Images/SVG/exp_img_8.svg';
+
+import exploreCSS from './explore.module.css';
 
 export default function Explore() {
 
@@ -20,6 +24,10 @@ export default function Explore() {
         {id: 2, title: t('beautyWord'), img: expImg2},
         {id: 3, title: t('restaurantWord'), img: expImg3},
         {id: 4, title: t('supermarketWord'), img: expImg4},
+        {id: 5, title: t('clothesWord'), img: expImg5},
+        {id: 6, title: t('skincareWord'), img: expImg6},
+        {id: 7, title: t('bagsWord'), img: expImg7},
+        {id: 8, title: t('accessoriesWord'), img: expImg8},
 
     ];
 
