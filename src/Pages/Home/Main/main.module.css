@@ -49,9 +49,15 @@
 
 }
 
-.download_app_cont img{
+.download_app_cont a{
 
     width: 150px;
+
+}
+
+.download_app_cont a img{
+
+    width: 100%;
 
 }
 
@@ -196,7 +202,7 @@
 
     }
 
-    .download_app_cont img{
+    .download_app_cont a{
 
         width: calc(50% - 10px);
 

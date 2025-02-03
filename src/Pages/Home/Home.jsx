@@ -2,6 +2,7 @@ import React from 'react'
 import Main from './Main/Main'
 import Choose from './Choose_Section/Choose'
 import About from './About_Section/About'
+import Explore from './Explore_Section/Explore'
 
 export default function Home() {
 
@@ -12,6 +13,8 @@ export default function Home() {
         <Choose />
 
         <About />
+
+        <Explore />
 
     </React.Fragment>
 

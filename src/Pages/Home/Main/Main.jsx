@@ -81,8 +81,13 @@ export default function Main() {
 
                 <div className={mainCSS.download_app_cont}>
 
-                    <img src={appStore} alt="" />
-                    <img src={googlePlay} alt="" />
+                    <a href="https://play.google.com/store/games?hl=en" target='_blank' rel="noreferrer">
+                        <img src={appStore} alt="app store link" />
+                    </a>
+
+                    <a href="https://www.apple.com/eg/app-store/" target='_blank' rel="noreferrer">
+                        <img src={googlePlay} alt="google play link" />
+                    </a>
 
                 </div>
 
