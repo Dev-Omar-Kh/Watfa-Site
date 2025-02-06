@@ -41,33 +41,7 @@
 
 /* ====== responsive-style ====== */
 
-@media only screen and (max-width: 1060px){
-
-    .container{
-
-        width: calc((100% / 3) - (20px - (20px / 3)));
-
-    }
-
-}
-
-@media only screen and (max-width: 850px){
-
-    .container{
-
-        width: calc(50% - 10px);
-
-    }
-
-}
-
 @media only screen and (max-width: 550px){
-
-    /* .container{
-
-        width: 100%;
-
-    } */
 
     .content_side p{
 

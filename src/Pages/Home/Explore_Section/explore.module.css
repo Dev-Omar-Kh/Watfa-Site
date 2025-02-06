@@ -10,9 +10,80 @@
 
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+@keyframes scroll {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 20px));
+    }
+
+}
+
+.scroll_cont{
+
+    display: inline-block;
+
+    &:first-child{
+
+        animation: scroll 40s linear infinite;
+
+    }
+
+}
+
+.cards_cont:hover .scroll_cont{
+
+    animation-play-state: paused;
+
+}
+
+.cards_scroll{
+
+    position: relative;
+    width: fit-content;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    transition: 0.3s;
+
+}
+
+.arrows_cont{
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+
+}
+
+.arrows_cont button{
+
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+}
+
+.arrows_cont button svg{
+
+    font-size: 1.25rem;
+    color: var(--violet-color);
 
 }

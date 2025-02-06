@@ -96,6 +96,8 @@ export default function Choose() {
 
             </div>
 
+            <p className={chooseCSS.p}>{t('whyChooseP')}</p>
+
             <div className={chooseCSS.boxes_cont}>
 
                 {cardsData.map( card => <Card key={card.id} data={card} />)}

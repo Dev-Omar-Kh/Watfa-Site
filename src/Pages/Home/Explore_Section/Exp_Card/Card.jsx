@@ -1,39 +1,52 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import cardCSS from './card.module.css';
 
-export default function Card({data}) {
+export default function Card({contWidth, data}) {
 
     // ====== count-height-of-card ====== //
 
-    const [cardHeight, setCardHeight] = useState('0');
-    const cardRef = useRef(null);
+    const [cardWidth, setCardWidth] = useState(0);
+
+    const updateCardWidth = (width, containerWidth) => {
+
+        if (containerWidth) {
+            if (width > 1060) {
+                return (containerWidth / 4) - 15;
+            } else if (width <= 1060 && width > 850) {
+                return (containerWidth / 3) - (20 - (20 / 3));
+            } else if (width <= 850) {
+                return (containerWidth / 2) - 10;
+            }
+        }
+
+        return 0;
+
+    };
 
     useEffect(() => {
 
-        const handleCardHeight = () => {
+        const handleScreenResize = () => {
 
-            if (cardRef.current) {
-                setCardHeight(cardRef.current.offsetWidth);
-            }
+            const newWidth = window.innerWidth;
+            setCardWidth(updateCardWidth(newWidth, contWidth));
+            console.log('Card width updated:', updateCardWidth(newWidth, contWidth));
 
-        }
+        };
 
-        handleCardHeight();
+        window.addEventListener('resize', handleScreenResize);
 
-        window.addEventListener('resize', handleCardHeight);
+        setCardWidth(updateCardWidth(window.innerWidth, contWidth));
 
         return () => {
+            window.removeEventListener('resize', handleScreenResize);
+        };
 
-            window.removeEventListener('resize', handleCardHeight);
-
-        }
-
-    } , []);
+    }, [contWidth]);
 
     return <React.Fragment>
 
-        <div ref={cardRef} style={{height: cardHeight}} className={cardCSS.container}>
+        <div style={{width: cardWidth ,height: cardWidth}} className={cardCSS.container}>
 
             <img src={data.img} alt={'test'} />
 

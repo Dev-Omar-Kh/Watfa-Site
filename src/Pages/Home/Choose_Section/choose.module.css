@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 .container{
 
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+}
+
+.p{
+
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: center;
+    color: var(--dark-gray-color);
+    font-family: "Quicksand", serif;
 
 }
 
@@ -37,6 +52,19 @@
     &:hover{
 
         scale: 0.95;
+
+    }
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 800px){
+
+    .p{
+
+        min-width: 100%;
+        font-size: 1rem;
 
     }
 
