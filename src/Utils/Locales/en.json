@@ -42,6 +42,22 @@
     "clothesWord": "Clothes",
     "skincareWord": "Skincare",
     "bagsWord": "Bags",
-    "accessoriesWord": "Accessories"
+    "accessoriesWord": "Accessories",
+
+    "spendWord": "Spend",
+    "analyticsWord": "Analytics",
+
+    "spendAnalyticsP": "Track your expenses and gain insights into your spending habits. Understand where and how you spend your money, helping you manage your budget more effectively.",
+
+    "subscribeWord": "Subscribe",
+    "subscribeSentence": "Be the first to receive exclusive updates Sign up now!",
+    "subscribeLabel": "Enter Your Email",
+
+    "footerMainSentence": "Your favorite way to pay ,Split in 4 payments. No late fees, Sharia compliant.",
+    "quickLinksWord": "Quick links",
+    "installAppWord": "Install App",
+    "securedPaymentWord": "Secured Payment Gateways",
+    "followWord": "Follow Us",
+    "copyrightSentence": "Copyright @ 2024 Watfa. All Rights Reserved"
 
 }

@@ -42,6 +42,22 @@
     "clothesWord": "الملابس",
     "skincareWord": "العناية بالبشرة",
     "bagsWord": "الحقائب",
-    "accessoriesWord": "الاكسسوارات"
+    "accessoriesWord": "الاكسسوارات",
+
+    "spendWord": "الانفاق",
+    "analyticsWord": "تحليلات",
+
+    "spendAnalyticsP": "تتبع نفقاتك واكتسب رؤى حول عادات الإنفاق لديك. تعرف على أين وكيف تنفق أموالك، مما يساعدك على إدارة ميزانيتك بشكل أكثر فعالية.",
+
+    "subscribeWord": "الاشتراك",
+    "subscribeSentence": "كن أول من يتلقى التحديثات الحصرية سجل الآن!",
+    "subscribeLabel": "ادخل ايميلك",
+
+    "footerMainSentence": "طريقتك المفضلة للدفع، قسّم إلى 4 دفعات. بدون رسوم تأخير، متوافق مع الشريعة الإسلامية.",
+    "quickLinksWord": "روابط سريعة",
+    "installAppWord": "تثبيت التطبيق",
+    "securedPaymentWord": "بوابات دفع آمنة",
+    "followWord": "تابعنا",
+    "copyrightSentence": "حقوق النشر © 2024 واطفا. جميع الحقوق محفوظة"
 
 }
