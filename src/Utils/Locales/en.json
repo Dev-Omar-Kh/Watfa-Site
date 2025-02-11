@@ -17,7 +17,7 @@
 
     "whyChooseP": "Whether celebrating birthdays, weddings, or simply treating yourself, Watfa lets you shop now and pay later with zero upfront payments.",
 
-    "whyCardsTitle1": "Rewards and Cashbacks",
+    "whyCardsTitle1": "Rewards and Discounts",
     "whyCardsTitle2": "Partnership",
     "whyCardsTitle3": "Enhanced Security",
     "whyCardsTitle4": "Interest-Free Installments",
@@ -58,6 +58,21 @@
     "installAppWord": "Install App",
     "securedPaymentWord": "Secured Payment Gateways",
     "followWord": "Follow Us",
-    "copyrightSentence": "Copyright @ 2024 Watfa. All Rights Reserved"
+    "copyrightSentence": "Copyright @ 2024 Watfa. All Rights Reserved",
+
+    "faqTitleLeft": "Frequently Asked",
+    "questionWord": "Questions",
+    "faqTitleSentence": "We are here to answer all your questions.",
+
+    "faqQuestion1": "What is Watfa's Buy Now, Pay Later (BNPL) service?",
+    "faqQuestion2": "How does the cashback system work?",
+    "faqQuestion3": "Is my financial information safe with Watfa?",
+    "faqQuestion4": "What if I am not satisfied with my purchase?",
+
+    "faqAnswer1": "Watfa’s BNPL service allows you to shop now and split your payments into interest-free installments, making your shopping experience more flexible and budget-friendly.",
+    "faqAnswer2": "Earn cashback on every eligible purchase, which you can use toward future shopping, making your experience even more rewarding.",
+    "faqAnswer3": "Absolutely! Watfa uses top-tier encryption and security protocols to ensure that your personal and financial data are safe.",
+    "faqAnswer4": "We partner with trusted brands that offer clear return and exchange policies. If you're not satisfied with your order, simply refer to our return policy for a hassle-free solution."
+
 
 }

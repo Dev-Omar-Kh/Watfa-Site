@@ -26,6 +26,12 @@
 
 }
 
+.container img{
+
+    width: 75px;
+
+}
+
 .content_cont{
 
     display: flex;

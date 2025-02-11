@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.title_cont{
+
+    position: relative;
+    width: fit-content;
+    padding: 0px 50px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.title_p{
+
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--dark-gray-color);
+    font-family: "Manrope", serif;
+
+}
+
+.quote{
+
+    position: absolute;
+    width: 50px;
+
+}
+
+.quote_top{
+
+    right: -25px;
+    top: -25px;
+
+}
+
+.quote_bottom{
+
+    left: -25px;
+    bottom: -25px;
+    transform: rotate(180deg);
+
+}
+
+.questions_cont{
+
+    width: 100%;
+    padding: 50px 4.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 20px;
+    background-color: var(--light-pink-color);
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 990px){
+
+    .container{
+
+        gap: 25px;
+
+    }
+
+    .title_cont{
+
+        padding: 50px 0px;
+        width: 100%;
+        overflow: hidden;
+
+    }
+
+    .quote_top{
+
+        right: 0px;
+        top: 0;
+
+    }
+
+    .quote_bottom{
+
+        left: 0px;
+        bottom: 0px;
+        transform: rotate(180deg);
+
+    }
+
+}
+
+@media only screen and (max-width: 590px){
+
+    .quote{
+
+        width: 30px;
+
+    }
+
+    .title_p{
+
+        font-size: 1rem;
+
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+
+    .questions_cont{
+
+        padding: 20px 4.5%;
+
+    }
+
+}

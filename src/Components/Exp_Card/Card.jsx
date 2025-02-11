@@ -8,7 +8,7 @@ export default function Card({data}) {
 
         <div className={`${cardCSS.container} ${data.active ? cardCSS.color_bg_box : ''}`}>
 
-            {data.svg}
+            <img src={data.img} alt={data.title} />
 
             <div className={cardCSS.content_cont}>
 

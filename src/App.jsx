@@ -3,12 +3,14 @@ import SiteLayout from './Layouts/Site-Layout/SiteLayout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import { useTranslation } from 'react-i18next';
+import FAQ from './Pages/FAQ/FAQ';
 
 const routes = createBrowserRouter([
 
     {path: '/', element: <SiteLayout />, children: [
 
-        {path: '/', element: <Home />}
+        {path: '/', element: <Home />},
+        {path: '/FAQ', element: <FAQ />},
 
     ]}
 

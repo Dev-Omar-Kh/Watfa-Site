@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.card{
+
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    gap: 20px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    background-color: var(--white-color);
+    box-shadow: 0px 5px 16px 0px #080F340F;
+    transition: 0.3s;
+
+}
+
+.card_active{
+
+    border-color: var(--pink-color);
+    box-shadow: 0px 6px 16px 0px #4A3AFF30;
+
+}
+
+.content_side{
+
+    width: calc(100% - 67px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: "DM Sans", serif;
+
+}
+
+.content_side h3{
+
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--violet-color);
+
+}
+
+.content_side p{
+
+    font-size: 1rem;
+    line-height: 30px;
+    color: var(--more-gray-color);
+
+}
+
+.arrow_side{
+
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--pink-color);
+    border-radius: 50%;
+    box-shadow: 0px 5px 16px 0px #080F340F;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.arrow_side_active{
+
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    transform: rotate(180deg);
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 450px){
+
+    .card{
+
+        padding: 20px;
+        flex-direction: column-reverse;
+        align-items: end;
+
+    }
+
+    .content_side{
+
+        width: 100%;
+
+    }
+
+}
