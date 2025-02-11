@@ -102,7 +102,7 @@ export default function Choose() {
 
                 {cardsData.map( card => <Card key={card.id} data={card} />)}
 
-                <div className={`${cardBoxCSS.container} ${chooseCSS.link_box}`}>
+                <div className={`${cardBoxCSS.container_last} ${chooseCSS.link_box}`}>
                     <a href="https://play.google.com/store/games?hl=en" target='_blank' rel="noreferrer">
                         <p>{t('shopNowWord')}</p>
                         <svg 

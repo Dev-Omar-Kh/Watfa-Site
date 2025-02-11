@@ -107,8 +107,19 @@
     position: absolute;
     top: 50%;
     left: 0%;
-    transform: translateY(-50%);
     width: 650px;
+
+}
+
+.main_img_en{
+
+    transform: translateY(-50%);
+
+}
+
+.main_img_ar{
+
+    transform: translateY(-50%) rotateY(180deg);
 
 }
 
@@ -170,7 +181,18 @@
     .main_img{
 
         left: 50%;
+
+    }
+
+    .main_img_en{
+
         transform: translate(-50%, -50%);
+
+    }
+
+    .main_img_ar{
+
+        transform: translate(-50%, -50%) rotateY(180deg);
 
     }
 

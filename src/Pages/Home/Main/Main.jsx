@@ -3,8 +3,8 @@ import Title from '../../../Components/Title/Title';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
-import mainImg from '../../../Images/main_img.png'
-import mainImgLtf from '../../../Images/main_img_ltr.png';
+import mainImg from '../../../Images/SVG/main_img.svg';
+// import mainImgLtf from '../../../Images/main_img_ltr.png';
 import basketImg from '../../../Images/basket_img.png';
 import appStore from '../../../Images/SVG/app-store-img.svg';
 import googlePlay from '../../../Images/SVG/google-play-img.svg';
@@ -145,8 +145,8 @@ export default function Main() {
                 </div>
 
                 <motion.img
-                    className={mainCSS.main_img}
-                    src={isEnglish ? mainImg : mainImgLtf} alt="main section" 
+                    className={`${mainCSS.main_img} ${!isEnglish ? mainCSS.main_img_ar : mainCSS.main_img_en}`}
+                    src={mainImg} alt="main section" 
                 />
 
             </div>

@@ -4,11 +4,13 @@
 
 .container{
 
+    padding-block: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 25px;
+    background-color: aqua;
     background-image: url(../../../Images/SVG/subscribe_bg_img.svg);
     background-repeat: no-repeat;
     /* background-size: 100% 100%; */
@@ -29,6 +31,8 @@
 
 .form{
 
+    width: 450px;
+    height: 64px;
     display: flex;
     align-items: center;
     border-radius: 50px;
@@ -39,19 +43,21 @@
 
 .form label{
 
-    height: 40px;
+    width: 50px;
+    height: 100%;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--lighter-gray-color);
 
 }
 
 .form input{
 
-    height: 40px;
+    width: calc(100% - 200px);
+    height: 100%;
     border: none;
     outline: none;
     font-size: 1rem;
@@ -68,7 +74,8 @@
 
 .form button{
 
-    height: 40px;
+    height: 100%;
+    width: 150px;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -93,6 +100,12 @@
 
     }
 
+    .form{
+
+        width: 100%;
+
+    }
+
 }
 
 @media only screen and (max-width: 450px){
@@ -106,19 +119,6 @@
     .form{
 
         max-width: 100%;
-
-    }
-
-    .form input{
-
-        font-size: 0.75rem;
-        max-width: 125px;
-
-    }
-
-    .form button{
-
-        font-size: 0.75rem;
 
     }
 
