@@ -24,7 +24,7 @@ export default function Card({data}) {
 
     return <React.Fragment>
 
-        <div className={`${cardCSS.card} ${displayAnswer ? cardCSS.card_active : ''}`}>
+        <div onClick={handleArrowClick} className={`${cardCSS.card} ${displayAnswer ? cardCSS.card_active : ''}`}>
 
             <div className={cardCSS.content_side}>
 
@@ -40,7 +40,7 @@ export default function Card({data}) {
 
             </div>
 
-            <div onClick={handleArrowClick} className={`${cardCSS.arrow_side} ${displayAnswer ? cardCSS.arrow_side_active : ''}`}>
+            <div className={`${cardCSS.arrow_side} ${displayAnswer ? cardCSS.arrow_side_active : ''}`}>
                 <IoIosArrowDown />
             </div>
 
