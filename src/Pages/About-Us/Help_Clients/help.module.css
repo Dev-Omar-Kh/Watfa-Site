@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.cards_cont{
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.card{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+
+    &:nth-child(even){
+
+        flex-direction: row-reverse;
+
+    }
+
+}
+
+.img_side{
+
+    position: relative;
+    width: 500px;
+
+}
+
+.main_img{
+
+    width: 100%;
+
+}
+
+.star_img{
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+
+}
+
+.content_side{
+
+    width: calc(100% - 600px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.content_side h3{
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black-color);
+    font-family: "Source Serif 4", serif;
+
+}
+
+.content_side p{
+
+    font-size: 1.25rem;
+    font-family: "Lato", serif;
+    color: var(--dark-gray-color);
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 1055px) and (min-width: 860px){
+
+    .img_side{
+
+        width: 350px;
+
+    }
+
+    .content_side{
+
+        width: calc(100% - 450px);
+
+    }
+
+}
+
+@media only screen and (max-width: 860px) {
+
+    .card{
+
+        flex-direction: column !important;
+        gap: 25px;
+
+    }
+
+    .content_side{
+
+        width: 100%;
+
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    .img_side{
+
+        width: 100%;
+
+    }
+
+}
+
+@media only screen and (max-width: 430px) {
+
+    .star_img{
+
+        bottom: -5px;
+        right: -5px;
+
+    }
+
+}

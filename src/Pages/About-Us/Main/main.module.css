@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.container{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+
+}
+
+.content_side{
+
+    max-width: calc(100% - 700px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.column_view{
+
+    display: none;
+
+}
+
+.content_p {
+
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 44.8px;
+    font-family: "Manrope", serif;
+    color: var(--dark-gray-color);
+
+}
+
+.img_side{
+
+    position: relative;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.bg_circle{
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(179.94deg, #FFC8EF 0.05%, #FFFFFF 71.4%);
+    z-index: -1;
+
+}
+
+.main_img{
+
+    width: 100%;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media only screen and (max-width: 1200px) and (min-width: 950px){
+
+    .content_side{
+
+        min-width: calc(100% - 500px);
+
+    }
+
+    .img_side{
+
+        width: 400px;
+
+    }
+
+}
+
+@media only screen and (max-width: 950px){
+
+    .container{
+
+        flex-direction: column-reverse;
+        gap: 25px;
+
+    }
+
+    .row_view{
+
+        display: none;
+
+    }
+
+    .column_view{
+
+        width: 100%;
+        display: block;
+
+    }
+
+    .content_side{
+
+        min-width: 100%;
+
+    }
+
+}
+
+@media only screen and (max-width: 675px){
+
+    .img_side{
+
+        width: 100%;
+
+    }
+
+}

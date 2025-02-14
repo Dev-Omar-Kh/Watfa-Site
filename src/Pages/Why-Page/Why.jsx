@@ -85,7 +85,7 @@ export default function Why() {
             const newOrder = [...prev.slice(1), prev[0]];
             return newOrder;
         });
-        }, 2000);
+        }, 6000);
 
         return () => clearInterval(interval);
     }, []);
