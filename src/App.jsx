@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import FAQ from './Pages/FAQ/FAQ';
 import Why from './Pages/Why-Page/Why';
 import About from './Pages/About-Us/About';
+import Contact from './Pages/Contact-Page/Contact';
 
 const routes = createBrowserRouter([
 
@@ -15,6 +16,7 @@ const routes = createBrowserRouter([
         {path: '/FAQ', element: <FAQ />},
         {path: '/whyWatfa', element: <Why />},
         {path: '/aboutWatfa', element: <About />},
+        {path: '/contact', element: <Contact />},
 
     ]}
 

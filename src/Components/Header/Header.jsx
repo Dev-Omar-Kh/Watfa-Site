@@ -96,7 +96,7 @@ export default function Header() {
 
                     <li>
                         <NavLink className='nav_bar_links' onClick={hideNavBar} to={'/contact'}>
-                            {t('contactWord')}
+                            {t('contactUsWord')}
                         </NavLink>
                     </li>
 

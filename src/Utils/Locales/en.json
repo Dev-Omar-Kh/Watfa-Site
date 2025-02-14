@@ -5,7 +5,7 @@
     "whyWord": "Why",
     "aboutWord": "About",
     "faqWord": "FAQ",
-    "contactWord": "Contact",
+    "contactUsWord": "Contact",
     "languageWord": "Language",
     "arabicWord": "Arabic",
     "englishWord": "English",
@@ -125,6 +125,19 @@
 
     "helpClientDescription1": "To provide innovative BNPL that give women the confidence to shop smart and manage their finances effectively..",
     "helpClientDescription2": "At Watfa, our goal is to empower women with flexible financial solutions that offer freedom and control. We aim to make shopping more accessible to women through secure BNPL service while promoting responsible spending. By partnering with trusted brands, we ensure every purchase is high-quality, and our cashback rewards make indulgence even more rewarding. Watfa is here to help women shop smart and live confidently.",
-    "helpClientDescription3": "To empower women to embrace their individuality and celebrate life's moments with ease, through accessible shopping and financial freedom."
+    "helpClientDescription3": "To empower women to embrace their individuality and celebrate life's moments with ease, through accessible shopping and financial freedom.",
+
+    "contactWord": "Contact",
+    "usContactWord": "Us",
+
+    "contactUsTitleSentence": "Feel free to reach out—we’re here to make your experience with Watfa smooth and enjoyable.",
+
+    "formTitle": "Get In Touch With Us",
+
+    "nameLabelForm": "Your name",
+    "emailLabelForm": "Your Email",
+    "numLabelForm": "Your Phone number",
+    "msgLabelForm": "Your Message",
+    "submitFormWord": "Send"
 
 }

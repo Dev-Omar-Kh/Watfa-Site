@@ -31,6 +31,7 @@ export default function Why() {
         {
             id: 1,
             title: t('whyPageCardsTitle1'),
+            active: true,
             description: t('whyPageCardsDescription1'),
             img: cardImg2
         },
@@ -45,7 +46,6 @@ export default function Why() {
         {
             id: 3,
             title: t('whyPageCardsTitle3'),
-            active: true,
             description: t('whyPageCardsDescription3'),
             img: cardImg1
         },

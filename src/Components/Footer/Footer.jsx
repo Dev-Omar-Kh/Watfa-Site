@@ -38,7 +38,7 @@ export default function Footer() {
                     <Link className={footerCSS.li_links}>{`${t('whyWord')} ${t('watfaWord')}`}</Link>
                     <Link className={footerCSS.li_links}>{`${t('aboutWord')} ${t('watfaWord')}`}</Link>
                     <Link className={footerCSS.li_links}>{t('faqWord')}</Link>
-                    <Link className={footerCSS.li_links}>{t('contactWord')}</Link>
+                    <Link className={footerCSS.li_links}>{t('contactUsWord')}</Link>
 
                 </div>
 
