@@ -10,10 +10,8 @@
     align-items: center;
     justify-content: center;
     gap: 25px;
-    background-color: aqua;
     background-image: url(../../../Images/SVG/subscribe_bg_img.svg);
     background-repeat: no-repeat;
-    /* background-size: 100% 100%; */
     background-position: center;
 
 }
@@ -119,6 +117,25 @@
     .form{
 
         max-width: 100%;
+        height: 40px;
+
+    }
+
+    .form input, .form button{
+
+        font-size: 0.75rem;
+
+    }
+
+    .form input{
+
+        width: calc(100% - 150px);
+
+    }
+
+    .form button{
+
+        width: 100px;
 
     }
 

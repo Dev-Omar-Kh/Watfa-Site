@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 75px;
+    border-top: 1px solid var(--lighter-black-color);
 
 }
 
@@ -77,14 +78,17 @@
 
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 
 }
 
 .img_cont a{
 
-    width: calc(40% - 5px);
+    width: calc((100% / 3) - (10px - (10px / 3)));
+    max-width: 150px;
 
 }
 
@@ -197,7 +201,7 @@
 
     .img_cont a{
 
-        width: calc(50% - 5px);
+        min-width: calc(50% - 5px);
 
     }
 

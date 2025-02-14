@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import { useTranslation } from 'react-i18next';
 import FAQ from './Pages/FAQ/FAQ';
+import Why from './Pages/Why-Page/Why';
 
 const routes = createBrowserRouter([
 
@@ -11,6 +12,7 @@ const routes = createBrowserRouter([
 
         {path: '/', element: <Home />},
         {path: '/FAQ', element: <FAQ />},
+        {path: '/whyWatfa', element: <Why />},
 
     ]}
 
@@ -19,6 +21,8 @@ const routes = createBrowserRouter([
 export default function App() {
 
     const {i18n} = useTranslation();
+
+    // ====== save-language ====== //
 
     useEffect(() => {
 

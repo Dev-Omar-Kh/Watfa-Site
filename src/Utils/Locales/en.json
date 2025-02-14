@@ -72,7 +72,43 @@
     "faqAnswer1": "Watfa’s BNPL service allows you to shop now and split your payments into interest-free installments, making your shopping experience more flexible and budget-friendly.",
     "faqAnswer2": "Earn cashback on every eligible purchase, which you can use toward future shopping, making your experience even more rewarding.",
     "faqAnswer3": "Absolutely! Watfa uses top-tier encryption and security protocols to ensure that your personal and financial data are safe.",
-    "faqAnswer4": "We partner with trusted brands that offer clear return and exchange policies. If you're not satisfied with your order, simply refer to our return policy for a hassle-free solution."
+    "faqAnswer4": "We partner with trusted brands that offer clear return and exchange policies. If you're not satisfied with your order, simply refer to our return policy for a hassle-free solution.",
 
+    "weWord": "We",
+    "offerWord": "Offer",
+
+    "whyTitleSentence": "Shopping Within Reach: Every Women Deserves to Shine",
+
+    "whyPageCardsTitle1": "Flexible, Interest-Free Payment Plans",
+    "whyPageCardsTitle2": "Exclusive Brand Partnerships",
+    "whyPageCardsTitle3": "Cashback Rewards with Watfa Wallet",
+    "whyPageCardsTitle4": "Quality Assurance & Simple Returns",
+    "whyPageCardsTitle5": "Smart Shopping for Every Occasion",
+    "whyPageCardsTitle6": "Secure & Effortless Payments",
+
+    "whyPageCardsDescription1": "Spread the cost of your purchases into easy 3 months installments — NO INTEREST, NO HIDDEN CHARGES.",
+    "whyPageCardsDescription2": "Our partnerships ensure premium quality and unique experiences tailored to your lifestyle.",
+    "whyPageCardsDescription3": "Earn cashback on eligible purchases, instantly credited to your Watfa Wallet for future savings.",
+    "whyPageCardsDescription4": "Find the right fit and quality with ease. Our return process keeps your installment plan flexible.",
+    "whyPageCardsDescription5": "Shop stress-free for birthdays, graduations, and more with flexible payment options.",
+    "whyPageCardsDescription6": "Secure transactions with multiple payment options, including debit cards, credit cards, and bank transfers.",
+
+    "termTitle": "Loan Term Options",
+    "termTitleSentence": "Watfa offers flexible payment options to suit your financial needs",
+
+    "termCardTitle1": "Single Payment Option",
+    "termCardTitle2": "Installment Option",
+
+    "termCardDescription1": "Pay the full amount within 25 days of your purchase.",
+    "termCardDescription2": "Spread payments over three months with zero interest.",
+
+    "howWorkTitle": "How it work",
+    "howWorkSentence": "Simple Buying Process",
+
+    "howWorkCardDescription1": "Select Your product",
+    "howWorkCardDescription2": "Choose a payment plan",
+    "howWorkCardDescription3": "Secure Checkout",
+    "howWorkCardDescription4": "Confirm Your Purchase",
+    "howWorkCardDescription5": "Enjoy Your Shopping"
 
 }

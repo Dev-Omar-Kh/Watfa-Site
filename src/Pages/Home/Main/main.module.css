@@ -45,6 +45,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 
 }
@@ -52,6 +53,7 @@
 .download_app_cont a{
 
     width: 150px;
+    max-width: calc(50% - 10px);
 
 }
 
@@ -80,11 +82,23 @@
 
 }
 
-.dash_bg img{
+.basket_img{
 
     position: absolute;
     top: -60px;
     width: 130px;
+
+}
+
+.basket_img_en {
+
+    right: -30px;
+
+}
+
+.basket_img_ar {
+
+    left: -30px;
 
 }
 
@@ -125,6 +139,7 @@
 
 .f_star{
 
+    width: 80px;
     position: absolute;
     top: -30px;
 
@@ -132,6 +147,7 @@
 
 .s_star{
 
+    width: 55px;
     position: absolute;
     bottom: -30px;
 
@@ -140,7 +156,8 @@
 .price_box{
 
     position: absolute;
-    bottom: -30px;
+    bottom: -25px;
+    width: 130px;
 
 }
 
@@ -196,11 +213,7 @@
 
     }
 
-}
-
-@media only screen and (max-width: 1080px) and (min-width: 590px){
-
-    .column_view{
+    .column_view {
 
         width: 100%;
         padding-bottom: 30px;
@@ -208,7 +221,7 @@
 
     }
 
-    .row_view{
+    .row_view {
 
         display: none;
 
@@ -218,28 +231,82 @@
 
 @media only screen and (max-width: 590px){
 
-    .column_view{
+    .container{
 
-        display: none;
-
-    }
-
-    .download_app_cont a{
-
-        width: calc(50% - 10px);
+        min-height: fit-content;
+        justify-content: start;
 
     }
 
     .img_side{
 
-        display: none;
+        width: 290px;
+        height: 290px;
 
     }
 
-    .container{
+    .dash_bg{
 
-        min-height: fit-content;
-        justify-content: start;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .main_img{
+
+        width: 130%;
+
+    }
+
+    .main_img_en {
+
+        left: 45%;
+
+    }
+
+    .main_img_ar {
+
+        left: 55%;
+
+    }
+
+    .basket_img{
+
+        width: 65px;
+        top: -15px;
+
+    }
+
+    .basket_img_en{
+
+        right: -10px;
+
+    }
+
+    .basket_img_ar{
+
+        left: -10px;
+
+    }
+
+    .f_star{
+
+        width: 60px;
+        top: -15px;
+
+    }
+
+    .s_star{
+
+        width: 30px;
+        bottom: -15px;
+
+    }
+
+    .price_box{
+
+        width: 80px;
+        bottom: -15px;
 
     }
 

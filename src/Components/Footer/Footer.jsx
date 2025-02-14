@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { TiSocialFacebook, TiSocialPinterest, TiSocialTwitter } from 'react-icons/ti';
+import { AiFillYoutube, AiOutlineInstagram } from 'react-icons/ai';
 
 import footerCSS from './footer.module.css';
 
 import logo from '../../Images/logo.png';
 import googlePlayImg from '../../Images/SVG/google-play-img.svg';
 import appStoreImg from '../../Images/SVG/app-store-img.svg';
-import { TiSocialFacebook, TiSocialPinterest, TiSocialTwitter } from 'react-icons/ti';
-import { AiFillYoutube, AiOutlineInstagram } from 'react-icons/ai';
+import appGallery from '../../Images/SVG/app_gallery_img.svg';
 
 export default function Footer() {
 
@@ -54,6 +55,9 @@ export default function Footer() {
                     </a>
                     <a href='https://play.google.com/store/games?hl=en' target='_blank' rel="noreferrer">
                         <img src={googlePlayImg} alt="app store download link" />
+                    </a>
+                    <a href='https://appgallery.huawei.com/Featured' target='_blank' rel="noreferrer">
+                        <img src={appGallery} alt="app gallery download link" />
                     </a>
 
                 </div>
