@@ -74,7 +74,7 @@ a {
 
 .nav_bar_links.active{
 
-    color: var(--pink-color);
+    color: var(--pink-color) !important;
 
 }
 

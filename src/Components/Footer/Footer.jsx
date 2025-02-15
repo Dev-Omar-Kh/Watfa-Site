@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { TiSocialFacebook, TiSocialPinterest, TiSocialTwitter } from 'react-icons/ti';
 import { AiFillYoutube, AiOutlineInstagram } from 'react-icons/ai';
@@ -35,10 +35,18 @@ export default function Footer() {
 
                 <div className={footerCSS.links_cont}>
 
-                    <Link className={footerCSS.li_links}>{`${t('whyWord')} ${t('watfaWord')}`}</Link>
-                    <Link className={footerCSS.li_links}>{`${t('aboutWord')} ${t('watfaWord')}`}</Link>
-                    <Link className={footerCSS.li_links}>{t('faqWord')}</Link>
-                    <Link className={footerCSS.li_links}>{t('contactUsWord')}</Link>
+                    <NavLink to={'/whyWatfa'} className={`nav_bar_links ${footerCSS.li_links}`}>
+                        {`${t('whyWord')} ${t('watfaWord')}`}
+                    </NavLink>
+                    <NavLink to={'/aboutWatfa'} className={`nav_bar_links ${footerCSS.li_links}`}>
+                        {`${t('aboutWord')} ${t('watfaWord')}`}
+                    </NavLink>
+                    <NavLink to={'/FAQ'} className={`nav_bar_links ${footerCSS.li_links}`}>
+                        {t('faqWord')}
+                    </NavLink>
+                    <NavLink to={'/contact'} className={`nav_bar_links ${footerCSS.li_links}`}>
+                        {t('contactUsWord')}
+                    </NavLink>
 
                 </div>
 

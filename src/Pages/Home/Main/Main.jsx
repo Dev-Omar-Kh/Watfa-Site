@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 import mainImg from '../../../Images/SVG/main_img.svg';
-import basketImg from '../../../Images/basket_img.png';
+import basketImg from '../../../Images/SVG/basket_img.svg';
 import appStore from '../../../Images/SVG/app-store-img.svg';
 import googlePlay from '../../../Images/SVG/google-play-img.svg';
 import appGalleryImg from '../../../Images/SVG/app_gallery_img.svg';
@@ -77,6 +77,7 @@ export default function Main() {
 
                 <div className={mainCSS.row_view}>
                     <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} svgType={'main'} />
+                    <p className={mainCSS.title_p}>{t('mainTitleSentence')}</p>
                 </div>
 
                 <p className={mainCSS.content_p}>{t('introWatfa')}</p>
@@ -143,6 +144,7 @@ export default function Main() {
 
             <div className={mainCSS.column_view}>
                 <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} svgType={'main'} />
+                <p className={mainCSS.title_p}>{t('mainTitleSentence')}</p>
             </div>
 
         </main>

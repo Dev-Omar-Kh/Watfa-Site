@@ -66,9 +66,9 @@ export default function Choose() {
 
                 <Title leftTitle={t('whyChooseWord')} rightTitle={t('watfaWord')} svgType={'sub'} />
 
-            </div>
+                <p className={chooseCSS.p}>{t('whyChooseP')}</p>
 
-            <p className={chooseCSS.p}>{t('whyChooseP')}</p>
+            </div>
 
             <div className={chooseCSS.boxes_cont}>
 
