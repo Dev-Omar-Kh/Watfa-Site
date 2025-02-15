@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import aboutImg from '../../../Images/SVG/about_img.svg';
 import star1 from '../../../Images/SVG/about_sec_star_1.svg';
 import { motion } from 'framer-motion';
+import Variants from '../../../Animation/Animations';
 
 export default function About() {
 
@@ -48,13 +49,17 @@ export default function About() {
 
     return <React.Fragment>
 
-        <section className={`common_cont ${aboutCSS.container}`}>
+        <motion.section 
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+            viewport={{once: true , amount: 0.1}}
+            className={`common_cont ${aboutCSS.container}`}
+        >
 
-            <div className={aboutCSS.column_view}>
+            <motion.div variants={Variants.toBottomVariants} viewport={{once: true , amount: 0.2}} className={aboutCSS.column_view}>
                 <Title leftTitle={t('aboutWord')} rightTitle={t('watfaWord')} svgType={'sub'} />
-            </div>
+            </motion.div>
 
-            <div className={aboutCSS.img_side}>
+            <motion.div variants={Variants.toTopVariants} className={aboutCSS.img_side}>
 
                 <div className={aboutCSS.img_cont}>
 
@@ -73,19 +78,19 @@ export default function About() {
 
                 </div>
 
-            </div>
+            </motion.div>
 
-            <div className={aboutCSS.content_side}>
+            <motion.div variants={Variants.parentVariants} className={aboutCSS.content_side}>
 
-                <div className={aboutCSS.row_view}>
+                <motion.div variants={Variants.toBottomVariants} className={aboutCSS.row_view}>
                     <Title leftTitle={t('aboutWord')} rightTitle={t('watfaWord')} svgType={'sub'} />
-                </div>
+                </motion.div>
 
-                <p className={aboutCSS.content_p}>{t('aboutWatfaParagraph')}</p>
+                <motion.p variants={Variants.toRightVariants} className={aboutCSS.content_p}>{t('aboutWatfaParagraph')}</motion.p>
 
-            </div>
+            </motion.div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

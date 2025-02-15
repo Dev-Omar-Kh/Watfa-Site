@@ -5,6 +5,7 @@ import Card from '../../Components/Exp_Card/Card';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import whyCSS from './why.module.css';
+import cardBoxCSS from '../../Components/Exp_Card/card.module.css';
 
 import phoneImg from '../../Images/SVG/phone_img.svg';
 import cardImg1 from '../../Images/SVG/card_icon_1.svg';
@@ -19,6 +20,7 @@ import termCardImg2 from '../../Images/SVG/term_card_img_2.svg';
 import whyImgsSecImg1 from '../../Images/SVG/why_imgs_sec_img_1.svg';
 import whyImgsSecImg2 from '../../Images/SVG/why_imgs_sec_img_2.svg';
 import whyImgsSecImg3 from '../../Images/SVG/why_imgs_sec_img_3.svg';
+import Variants from '../../Animation/Animations';
 
 export default function Why() {
 
@@ -163,7 +165,14 @@ export default function Why() {
 
             <div className={whyCSS.cards_cont}>
 
-                {cardsData.map( card => <Card key={card.id} data={card} />)}
+                {cardsData.map( (card, idx) => (
+                    <motion.div 
+                        className={`${cardBoxCSS.container} ${card.active ? cardBoxCSS.color_bg_box : ''}`} key={card.id} 
+                        variants={Variants.toBottomVariants} custom={idx}
+                    >
+                        <Card data={card} />
+                    </motion.div>
+                ))}
 
             </div>
 

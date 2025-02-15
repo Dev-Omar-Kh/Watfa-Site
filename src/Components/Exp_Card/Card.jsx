@@ -6,7 +6,7 @@ export default function Card({data}) {
 
     return <React.Fragment>
 
-        <div className={`${cardCSS.container} ${data.active ? cardCSS.color_bg_box : ''}`}>
+        {/* <div className={`${cardCSS.container} ${data.active ? cardCSS.color_bg_box : ''}`}> */}
 
             <img src={data.img} alt={data.title} />
 
@@ -18,7 +18,7 @@ export default function Card({data}) {
 
             </div>
 
-        </div>
+        {/* </div> */}
 
     </React.Fragment>
 

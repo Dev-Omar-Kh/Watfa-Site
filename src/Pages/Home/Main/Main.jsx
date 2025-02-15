@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Title from '../../../Components/Title/Title';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import Variants from '../../../Animation/Animations';
 
 import mainImg from '../../../Images/SVG/main_img.svg';
 import basketImg from '../../../Images/SVG/basket_img.svg';
@@ -71,36 +72,36 @@ export default function Main() {
 
     return <React.Fragment>
 
-        <main className={mainCSS.container}>
+        <motion.main variants={Variants.parentVariantsNoStagger} initial='hidden' animate='visible' className={mainCSS.container}>
 
-            <div className={mainCSS.content_side}>
+            <motion.div variants={Variants.parentVariants} className={mainCSS.content_side}>
 
-                <div className={mainCSS.row_view}>
+                <motion.div variants={Variants.toTopVariants} className={mainCSS.row_view}>
                     <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} svgType={'main'} />
                     <p className={mainCSS.title_p}>{t('mainTitleSentence')}</p>
-                </div>
+                </motion.div>
 
-                <p className={mainCSS.content_p}>{t('introWatfa')}</p>
+                <motion.p variants={Variants.toLeftVariants} className={mainCSS.content_p}>{t('introWatfa')}</motion.p>
 
-                <div className={mainCSS.download_app_cont}>
+                <motion.div variants={Variants.parentVariants} className={mainCSS.download_app_cont}>
 
-                    <a href="https://www.apple.com/eg/app-store/" target='_blank' rel="noreferrer">
+                    <motion.a variants={Variants.toTopVariants} href="https://www.apple.com/eg/app-store/" target='_blank' rel="noreferrer">
                         <img src={appStore} alt="app store link" />
-                    </a>
+                    </motion.a>
 
-                    <a href="https://play.google.com/store/games?hl=en" target='_blank' rel="noreferrer">
+                    <motion.a variants={Variants.toTopVariants} href="https://play.google.com/store/games?hl=en" target='_blank' rel="noreferrer">
                         <img src={googlePlay} alt="google play link" />
-                    </a>
+                    </motion.a>
 
-                    <a href="https://appgallery.huawei.com/Featured" target='_blank' rel="noreferrer">
+                    <motion.a variants={Variants.toTopVariants} href="https://appgallery.huawei.com/Featured" target='_blank' rel="noreferrer">
                         <img src={appGalleryImg} alt="app gallery link" />
-                    </a>
+                    </motion.a>
 
-                </div>
+                </motion.div>
 
-            </div>
+            </motion.div>
 
-            <div className={mainCSS.img_side}>
+            <motion.div variants={Variants.parentVariants} className={mainCSS.img_side}>
 
                 <div className={mainCSS.dash_bg}>
 
@@ -140,14 +141,14 @@ export default function Main() {
                     src={mainImg} alt="main section" 
                 />
 
-            </div>
+            </motion.div>
 
-            <div className={mainCSS.column_view}>
+            <motion.div variants={Variants.toTopVariants} className={mainCSS.column_view}>
                 <Title leftTitle={t('welcomeToWord')} rightTitle={t('watfaWord')} svgType={'main'} />
                 <p className={mainCSS.title_p}>{t('mainTitleSentence')}</p>
-            </div>
+            </motion.div>
 
-        </main>
+        </motion.main>
 
     </React.Fragment>
 

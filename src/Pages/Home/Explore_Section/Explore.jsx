@@ -13,6 +13,8 @@ import expImg7 from '../../../Images/SVG/exp_img_7.svg';
 import expImg8 from '../../../Images/SVG/exp_img_8.svg';
 
 import exploreCSS from './explore.module.css';
+import { motion } from 'framer-motion';
+import Variants from '../../../Animation/Animations';
 
 export default function Explore() {
 
@@ -58,9 +60,15 @@ export default function Explore() {
 
     return <React.Fragment>
 
-        <section className={`common_cont ${exploreCSS.container}`}>
+        <motion.section 
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+            viewport={{once: true , amount: 0.1}}
+            className={`common_cont ${exploreCSS.container}`}
+        >
 
-            <Title leftTitle={t('exploreWord')} rightTitle={t('watfaWord')} svgType={'sub'} />
+            <motion.div variants={Variants.toBottomVariants} viewport={{once: true , amount: 0.2}}>
+                <Title leftTitle={t('exploreWord')} rightTitle={t('watfaWord')} svgType={'sub'} />
+            </motion.div>
 
             <div dir={i18n.language === 'ar' ? 'ltr' : 'ltr'} ref={containerRef} className={exploreCSS.cards_cont}>
 
@@ -82,7 +90,7 @@ export default function Explore() {
 
             </div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

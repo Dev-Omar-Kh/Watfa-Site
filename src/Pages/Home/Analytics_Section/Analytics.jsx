@@ -8,6 +8,8 @@ import carImg from '../../../Images/SVG/car_img.svg';
 import lineCarImg from '../../../Images/SVG/line_car_img.svg';
 import cartSignImg from '../../../Images/SVG/cart_sign_img.svg';
 import cartAmountImg from '../../../Images/SVG/cart_amount_img.svg';
+import { motion } from 'framer-motion';
+import Variants from '../../../Animation/Animations';
 
 export default function Analytics() {
 
@@ -15,23 +17,27 @@ export default function Analytics() {
 
     return <React.Fragment>
 
-        <section className={`common_cont ${analyticsCSS.container}`}>
+        <motion.section 
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+            viewport={{once: true , amount: 0.1}}
+            className={`common_cont ${analyticsCSS.container}`}
+        >
 
-            <div className={analyticsCSS.content_side}>
+            <motion.div variants={Variants.parentVariants} viewport={{once: true , amount: 0.1}} className={analyticsCSS.content_side}>
 
-                <div className={analyticsCSS.row_title}>
+                <motion.div variants={Variants.toTopVariants} className={analyticsCSS.row_title}>
                     <Title 
                         svgType={'sub'} 
                         leftTitle={i18n.language === 'en' ? t('spendWord') : t('analyticsWord')} 
                         rightTitle={i18n.language === 'en' ? t('analyticsWord') : t('spendWord')} 
                     />
-                </div>
+                </motion.div>
 
-                <p className={analyticsCSS.par}>{t('spendAnalyticsP')}</p>
+                <motion.p variants={Variants.toRightVariants} className={analyticsCSS.par}>{t('spendAnalyticsP')}</motion.p>
 
-            </div>
+            </motion.div>
 
-            <div className={analyticsCSS.img_side}>
+            <motion.div variants={Variants.scaleOutVariants} viewport={{once: true , amount: 0.2}} className={analyticsCSS.img_side}>
 
                 <img
                     style={i18n.language === 'ar' ? {transform: 'rotateY(180deg)'} : {}} 
@@ -62,17 +68,17 @@ export default function Analytics() {
                     src={cartAmountImg} alt="cart amount" 
                 />
 
-            </div>
+            </motion.div>
 
-            <div className={analyticsCSS.column_title}>
+            <motion.div variants={Variants.toTopVariants} viewport={{once: true , amount: 0.1}} className={analyticsCSS.column_title}>
                 <Title 
                     svgType={'sub'} 
                     leftTitle={i18n.language === 'en' ? t('spendWord') : t('analyticsWord')} 
                     rightTitle={i18n.language === 'en' ? t('analyticsWord') : t('spendWord')} 
                 />
-            </div>
+            </motion.div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

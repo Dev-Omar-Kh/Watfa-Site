@@ -10,6 +10,8 @@ import logo from '../../Images/logo.png';
 import googlePlayImg from '../../Images/SVG/google-play-img.svg';
 import appStoreImg from '../../Images/SVG/app-store-img.svg';
 import appGallery from '../../Images/SVG/app_gallery_img.svg';
+import { motion } from 'framer-motion';
+import Variants from '../../Animation/Animations';
 
 export default function Footer() {
 
@@ -17,7 +19,11 @@ export default function Footer() {
 
     return <React.Fragment>
 
-        <footer className={`common_cont ${footerCSS.container}`}>
+        <motion.footer 
+            variants={Variants.parentVariantsNoStagger} initial='hidden' whileInView={'visible'}
+            viewport={{once: true , amount: 0.1}}
+            className={`common_cont ${footerCSS.container}`}
+        >
 
             <div className={`${footerCSS.common_sec} ${footerCSS.main_sec}`}>
 
@@ -108,7 +114,7 @@ export default function Footer() {
                 <p>{t('copyrightSentence')}</p>
             </div>
 
-        </footer>
+        </motion.footer>
 
     </React.Fragment>
 
