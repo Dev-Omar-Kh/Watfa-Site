@@ -5,6 +5,8 @@ import aboutCSS from './about.module.css';
 import { useTranslation } from 'react-i18next';
 import Main from './Main/Main';
 import Help from './Help_Clients/Help';
+import { motion } from 'framer-motion';
+import Variants from '../../Animation/Animations';
 
 export default function About() {
 
@@ -12,21 +14,25 @@ export default function About() {
 
     return <React.Fragment>
 
-        <section className={`common_cont ${aboutCSS.container}`}>
+        <motion.section 
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+            viewport={{once: true , amount: 0.1}} 
+            className={`common_cont ${aboutCSS.container}`}
+        >
 
-            <div className={aboutCSS.title_cont}>
+            <motion.div variants={Variants.toBottomVariants} viewport={{once: true , amount: 0.2}} className={aboutCSS.title_cont}>
 
                 <Title leftTitle={t('aboutTitleWord')} rightTitle={t('usWord')} svgType={'main'} />
 
                 <p className={aboutCSS.title_p}>{t('aboutSentence')}</p>
 
-            </div>
+            </motion.div>
 
             <Main />
 
             <Help />
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

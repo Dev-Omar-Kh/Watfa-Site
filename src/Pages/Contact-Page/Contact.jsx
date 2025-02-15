@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import contactCSS from './contact.module.css';
 
 import cartImg from '../../Images/SVG/contact_cart_img.svg';
+import { motion } from 'framer-motion';
+import Variants from '../../Animation/Animations';
 
 export default function Contact() {
 
@@ -12,19 +14,23 @@ export default function Contact() {
 
     return <React.Fragment>
 
-        <section className={`common_cont ${contactCSS.container}`}>
+        <motion.section
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'} 
+            viewport={{once: true , amount: 0.1}}
+            className={`common_cont ${contactCSS.container}`}
+        >
 
-            <div className={contactCSS.title_cont}>
+            <motion.div variants={Variants.toBottomVariants} className={contactCSS.title_cont}>
 
                 <Title leftTitle={t('contactWord')} rightTitle={t('usContactWord')} svgType={'main'} />
 
                 <p className={contactCSS.title_p}>{t('contactUsTitleSentence')}</p>
 
-            </div>
+            </motion.div>
 
             <div className={contactCSS.contact_cont}>
 
-                <div className={contactCSS.img_side}>
+                <motion.div variants={Variants.toTopVariants} viewport={{once: true , amount: 0.2}} className={contactCSS.img_side}>
 
                     <div className={contactCSS.main_circle}></div>
 
@@ -49,9 +55,9 @@ export default function Contact() {
                         className={`${contactCSS.sub_circle} ${contactCSS.circle_3}`}>
                     </div>
 
-                </div>
+                </motion.div>
 
-                <form className={contactCSS.form}>
+                <motion.form variants={Variants.toBottomVariants} viewport={{once: true , amount: 0.2}} className={contactCSS.form}>
 
                     <h3 className={contactCSS.form_title}>{t('formTitle')}</h3>
 
@@ -117,11 +123,11 @@ export default function Contact() {
 
                     </div>
 
-                </form>
+                </motion.form>
 
             </div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

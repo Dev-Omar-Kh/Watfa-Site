@@ -153,30 +153,43 @@ export default function Why() {
 
     return <React.Fragment>
 
-        <section className={`common_cont ${whyCSS.container}`}>
+        <motion.section 
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+            viewport={{once: true , amount: 0.1}}
+            className={`common_cont ${whyCSS.container}`}
+        >
 
-            <div className={whyCSS.title_cont}>
+            <motion.div variants={Variants.toBottomVariants} viewport={{once: true , amount: 0.2}} className={whyCSS.title_cont}>
 
                 <Title leftTitle={t('weWord')} rightTitle={t('offerWord')} svgType={'main'} />
 
                 <p className={whyCSS.title_p}>{t('whyTitleSentence')}</p>
 
-            </div>
+            </motion.div>
 
-            <div className={whyCSS.cards_cont}>
+            <motion.div 
+                variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+                viewport={{once: true , amount: 0.1}}
+                className={whyCSS.cards_cont}
+            >
 
                 {cardsData.map( (card, idx) => (
                     <motion.div 
-                        className={`${cardBoxCSS.container} ${card.active ? cardBoxCSS.color_bg_box : ''}`} key={card.id} 
+                        viewport={{once: true , amount: 0.2}}
                         variants={Variants.toBottomVariants} custom={idx}
+                        className={`${cardBoxCSS.container} ${card.active ? cardBoxCSS.color_bg_box : ''}`} key={card.id} 
                     >
                         <Card data={card} />
                     </motion.div>
                 ))}
 
-            </div>
+            </motion.div>
 
-            <div className={whyCSS.imgs_cont}>
+            <motion.div 
+                variants={Variants.parentVariantsNoStagger} 
+                viewport={{once: true , amount: 0.2}} 
+                className={whyCSS.imgs_cont}
+            >
 
                 <AnimatePresence mode="sync">
                     {currentImages.map((img, idx) => <div className={whyCSS.img_card_cont} key={idx}>
@@ -189,54 +202,77 @@ export default function Why() {
                     </div>)}
                 </AnimatePresence>
 
-            </div>
+            </motion.div>
 
-            <div className={whyCSS.term_options}>
+            <motion.div 
+                variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+                viewport={{once: true , amount: 0.1}}
+                className={whyCSS.term_options}
+            >
 
-                <div className={whyCSS.term_title_cont}>
+                <motion.div variants={Variants.toTopVariants} className={whyCSS.term_title_cont}>
 
                     <h3>{t('termTitle')}</h3>
 
                     <p>{t('termTitleSentence')}</p>
 
-                </div>
+                </motion.div>
 
                 <div className={whyCSS.term_cards_cont}>
 
-                    {termCardsData.map(card => <div key={card.id} className={whyCSS.term_card}>
+                    {termCardsData.map((card, idx) => (
+                        <motion.div variants={Variants.toBottomVariants} custom={idx} key={card.id} className={whyCSS.term_card}>
 
-                        <img style={i18n.language === 'ar' ? {transform: 'rotateY(180deg)'} : {}} src={card.img} alt={card.title} />
+                            <img style={i18n.language === 'ar' ? {transform: 'rotateY(180deg)'} : {}} src={card.img} alt={card.title} />
 
-                        <div className={whyCSS.term_card_content}>
-                            <h3>{card.title}</h3>
-                            <p>{card.content}</p>
-                        </div>
+                            <div className={whyCSS.term_card_content}>
+                                <h3>{card.title}</h3>
+                                <p>{card.content}</p>
+                            </div>
 
-                    </div>)}
+                        </motion.div>
+                    ))}
 
                 </div>
 
-            </div>
+            </motion.div>
 
-            <div className={whyCSS.how_work}>
+            <motion.div 
+                variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+                viewport={{once: true , amount: 0.1}}
+                className={whyCSS.how_work}
+            >
 
-                <div className={whyCSS.term_title_cont}>
+                <motion.div 
+                    variants={Variants.toTopVariants} 
+                    viewport={{once: true , amount: 0.2}} 
+                    className={whyCSS.term_title_cont}
+                >
 
                     <h3>{t('howWorkTitle')}</h3>
 
                     <p>{t('howWorkSentence')}</p>
 
-                </div>
+                </motion.div>
 
                 <div className={whyCSS.how_work_cont}>
 
-                    <div className={whyCSS.work_left}>
+                    <motion.div 
+                        variants={Variants.toBottomVariants} 
+                        viewport={{once: true , amount: 0.2}} 
+                        className={whyCSS.work_left}
+                    >
 
                         <img className={whyCSS.work_left_main_img} src={phoneImg} alt="phoneImg" />
                         <img className={whyCSS.work_left_line_img} src={linePhoneImg} alt="linePhoneImg" />
 
-                    </div>
-                    <div className={whyCSS.work_right}>
+                    </motion.div>
+
+                    <motion.div 
+                        variants={Variants.toTopVariants}
+                        viewport={{once: true , amount: 0.2}}
+                        className={whyCSS.work_right}
+                    >
 
                         <div style={i18n.language === 'en' ? {left: 14} : {right: 14}} className={whyCSS.line_dashed}></div>
 
@@ -247,13 +283,13 @@ export default function Why() {
 
                         </div>)}
 
-                    </div>
+                    </motion.div>
 
                 </div>
 
-            </div>
+            </motion.div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

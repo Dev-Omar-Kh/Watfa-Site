@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 import quoteImg from '../../Images/SVG/quote_img.svg';
 import Card from '../../Components/FAQ_Card/Card';
+import { motion } from 'framer-motion';
+import Variants from './../../Animation/Animations';
 
 export default function FAQ() {
 
@@ -43,11 +45,19 @@ export default function FAQ() {
 
     return <React.Fragment>
 
-        <section className={`common_cont ${faqCSS.container}`}>
+        <motion.section 
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'} 
+            viewport={{once: true , amount: 0.1}}
+            className={`common_cont ${faqCSS.container}`}
+        >
 
-            <div className={faqCSS.title_cont}>
+            <motion.div variants={Variants.scaleOutVariants} className={faqCSS.title_cont}>
 
-                <img className={`${faqCSS.quote} ${faqCSS.quote_top}`} src={quoteImg} alt="quote top" />
+                <motion.img 
+                    variants={Variants.toBottomVariants} 
+                    className={`${faqCSS.quote} ${faqCSS.quote_top}`} 
+                    src={quoteImg} alt="quote top" 
+                />
 
                 <Title 
                     svgType={'main'} 
@@ -57,17 +67,28 @@ export default function FAQ() {
 
                 <p className={faqCSS.title_p}>{t('faqTitleSentence')}</p>
 
-                <img className={`${faqCSS.quote} ${faqCSS.quote_bottom}`} src={quoteImg} alt="quote bottom" />
+                <motion.img 
+                    variants={Variants.toTopVariants}
+                    className={`${faqCSS.quote} ${faqCSS.quote_bottom}`} 
+                    src={quoteImg} alt="quote bottom" 
+                />
 
-            </div>
+            </motion.div>
 
-            <div className={faqCSS.questions_cont}>
+            <motion.div variants={Variants.parentVariants} className={faqCSS.questions_cont}>
 
-                {faqData.map(que => <Card key={que.id} data={que} />)}
+                {faqData.map((que, idx) => (
+                    <motion.div 
+                        variants={(idx+1) % 2 === 0 ? Variants.toRightVariants : Variants.toLeftVariants} 
+                        viewport={{once: true , amount: 0.2}} custom={idx}
+                    >
+                        <Card key={que.id} data={que} />
+                    </motion.div>
+                ))}
 
-            </div>
+            </motion.div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

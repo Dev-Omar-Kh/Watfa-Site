@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import mainCSS from './main.module.css';
 
 import aboutImg from '../../../Images/SVG/about_main_img.svg';
+import { motion } from 'framer-motion';
+import Variants from './../../../Animation/Animations';
 
 export default function Main() {
 
@@ -41,31 +43,44 @@ export default function Main() {
 
     return <React.Fragment>
 
-        <section className={mainCSS.container}>
+        <motion.section 
+            variants={Variants.parentVariantsNoStagger} initial='hidden' whileInView={'visible'} 
+            viewport={{once: true , amount: 0.1}}
+            className={mainCSS.container}
+        >
 
-            <div className={mainCSS.content_side}>
+            <motion.div variants={Variants.parentVariants} className={mainCSS.content_side}>
 
-                <div className={mainCSS.row_view}>
+                <motion.div variants={Variants.toTopVariants} viewport={{once: true , amount: 0.2}} className={mainCSS.row_view}>
                     <Title leftTitle={t('aboutWord')} rightTitle={t('watfaWord')} svgType={'sub'} />
-                </div>
+                </motion.div>
 
-                <p className={mainCSS.content_p}>{t('aboutWatfaSentence')}</p>
+                <motion.p 
+                    variants={Variants.toRightVariants} 
+                    viewport={{once: true , amount: 0.2}} 
+                    className={mainCSS.content_p}
+                >{t('aboutWatfaSentence')}</motion.p>
 
-            </div>
+            </motion.div>
 
-            <div ref={imgSideRef} style={{height: imgSideHeight}} className={mainCSS.img_side}>
+            <motion.div 
+                variants={Variants.toLeftVariants} 
+                viewport={{once: true , amount: 0.2}}
+                ref={imgSideRef} style={{height: imgSideHeight}} 
+                className={mainCSS.img_side}
+            >
 
                 <div className={mainCSS.bg_circle}></div>
 
                 <img className={mainCSS.main_img} src={aboutImg} alt="aboutImg" />
 
-            </div>
+            </motion.div>
 
-            <div className={mainCSS.column_view}>
+            <motion.div variants={Variants.toTopVariants} viewport={{once: true , amount: 0.2}} className={mainCSS.column_view}>
                 <Title leftTitle={t('aboutWord')} rightTitle={t('watfaWord')} svgType={'sub'} />
-            </div>
+            </motion.div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 

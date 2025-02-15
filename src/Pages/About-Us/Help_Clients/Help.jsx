@@ -9,6 +9,7 @@ import helpClientsImg2 from '../../../Images/SVG/help_clients_img_2.svg';
 import helpClientsImg3 from '../../../Images/SVG/help_clients_img_3.svg';
 import pinkStarImg from '../../../Images/SVG/pink_star_img.svg';
 import { motion } from 'framer-motion';
+import Variants from '../../../Animation/Animations';
 
 export default function Help() {
 
@@ -55,37 +56,49 @@ export default function Help() {
 
     return <React.Fragment>
 
-        <section className={helpCSS.container}>
+        <motion.section 
+            variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
+            viewport={{once: true , amount: 0.1}}
+            className={helpCSS.container}
+        >
 
-            <Title leftTitle={t('helpClientsTitle')} rightTitle={t('helpClientsTitleRight')} svgType={'sub'} />
+            <motion.div variants={Variants.toTopVariants} viewport={{once: true , amount: 0.2}}>
+                <Title leftTitle={t('helpClientsTitle')} rightTitle={t('helpClientsTitleRight')} svgType={'sub'} />
+            </motion.div>
 
             <div className={helpCSS.cards_cont}>
 
-                {cardData.map(card => <div key={card.id} className={helpCSS.card}>
+                {cardData.map((card, idx) => (
+                    <motion.div 
+                        variants={(idx+1) % 2 === 0 ? Variants.toLeftVariants : Variants.toRightVariants} 
+                        viewport={{once: true , amount: 0.2}}
+                        custom={idx} key={card.id} className={helpCSS.card}
+                    >
 
-                    <div className={helpCSS.img_side}>
+                        <div className={helpCSS.img_side}>
 
-                        <img className={helpCSS.main_img} src={card.img} alt={card.title} />
-                        <motion.img
-                            variants={repeatVariants} initial='hidden' animate='visible'
-                            className={helpCSS.star_img} src={pinkStarImg} alt="pinkStarImg" 
-                        />
+                            <img className={helpCSS.main_img} src={card.img} alt={card.title} />
+                            <motion.img
+                                variants={repeatVariants} initial='hidden' animate='visible'
+                                className={helpCSS.star_img} src={pinkStarImg} alt="pinkStarImg" 
+                            />
 
-                    </div>
+                        </div>
 
-                    <div className={helpCSS.content_side}>
+                        <div className={helpCSS.content_side}>
 
-                        <h3>{card.title}</h3>
+                            <h3>{card.title}</h3>
 
-                        <p>{card.desc}</p>
+                            <p>{card.desc}</p>
 
-                    </div>
+                        </div>
 
-                </div>)}
+                    </motion.div>
+                ))}
 
             </div>
 
-        </section>
+        </motion.section>
 
     </React.Fragment>
 
