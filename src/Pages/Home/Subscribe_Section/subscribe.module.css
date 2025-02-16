@@ -13,6 +13,7 @@
     background-image: url(../../../Images/SVG/subscribe_bg_img.svg);
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 
 }
 
