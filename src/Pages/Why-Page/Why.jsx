@@ -155,11 +155,10 @@ export default function Why() {
 
         <motion.section 
             variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
-            viewport={{once: true , amount: 0.1}}
             className={`common_cont ${whyCSS.container}`}
         >
 
-            <motion.div variants={Variants.toBottomVariants} viewport={{once: true , amount: 0.2}} className={whyCSS.title_cont}>
+            <motion.div variants={Variants.toBottomVariants} className={whyCSS.title_cont}>
 
                 <Title leftTitle={t('weWord')} rightTitle={t('offerWord')} svgType={'main'} />
 

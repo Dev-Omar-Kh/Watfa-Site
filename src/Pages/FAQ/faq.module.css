@@ -61,6 +61,7 @@
     gap: 25px;
     border-radius: 20px;
     background-color: var(--light-pink-color);
+    overflow: hidden;
 
 }
 
