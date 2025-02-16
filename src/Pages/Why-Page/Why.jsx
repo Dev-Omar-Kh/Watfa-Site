@@ -205,7 +205,7 @@ export default function Why() {
                             variants={imgsVariants} initial='hidden' animate='visible' exit={'exit'}
                             className={`${whyCSS[`img${idx+1}`]} ${whyCSS.img}`} id={`img${idx + 1}`}
                             style={idx === 1 ? {scale: 1} : {scale: 0.8}}
-                            key={`${img}-${idx}`} src={img} alt={img}
+                            key={`${img}-${idx}`} loading='lazy' src={img} alt={img}
                         />
                     </div>)}
                 </AnimatePresence>
@@ -231,7 +231,7 @@ export default function Why() {
                     {termCardsData.map((card, idx) => (
                         <motion.div variants={Variants.toBottomVariants} custom={idx} key={card.id} className={whyCSS.term_card}>
 
-                            <img style={i18n.language === 'ar' ? {transform: 'rotateY(180deg)'} : {}} src={card.img} alt={card.title} />
+                            <img style={i18n.language === 'ar' ? {transform: 'rotateY(180deg)'} : {}} loading='lazy' src={card.img} alt={card.title} />
 
                             <div className={whyCSS.term_card_content}>
                                 <h3>{card.title}</h3>
@@ -271,8 +271,8 @@ export default function Why() {
                         className={whyCSS.work_left}
                     >
 
-                        <img className={whyCSS.work_left_main_img} src={phoneImg} alt="phoneImg" />
-                        <img className={whyCSS.work_left_line_img} src={linePhoneImg} alt="linePhoneImg" />
+                        <img className={whyCSS.work_left_main_img} loading='lazy' src={phoneImg} alt="phoneImg" />
+                        <img className={whyCSS.work_left_line_img} loading='lazy' src={linePhoneImg} alt="linePhoneImg" />
 
                     </motion.div>
 

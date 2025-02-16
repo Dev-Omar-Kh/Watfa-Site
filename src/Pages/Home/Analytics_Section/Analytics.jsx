@@ -41,7 +41,7 @@ export default function Analytics() {
 
                 <img
                     style={i18n.language === 'ar' ? {transform: 'rotateY(180deg)'} : {}} 
-                    className={analyticsCSS.main_img} src={carImg} alt="main cart" 
+                    className={analyticsCSS.main_img} loading='lazy' src={carImg} alt="main cart" 
                 />
 
                 <img
@@ -49,7 +49,7 @@ export default function Analytics() {
                         ${analyticsCSS.sub_img}
                         ${i18n.language === 'en' ? analyticsCSS.sub_img_en : analyticsCSS.sub_img_ar}
                     `} 
-                    src={lineCarImg} alt="line cart" 
+                    loading='lazy' src={lineCarImg} alt="line cart" 
                 />
 
                 <img 
@@ -57,7 +57,7 @@ export default function Analytics() {
                         ${analyticsCSS.sub_sub_img} ${analyticsCSS.sign_img}
                         ${i18n.language === 'en' ? analyticsCSS.sign_img_en : analyticsCSS.sign_img_ar}
                     `} 
-                    src={cartSignImg} alt="cart orange sign"
+                    loading='lazy' src={cartSignImg} alt="cart orange sign"
                 />
 
                 <img 
@@ -65,7 +65,7 @@ export default function Analytics() {
                         ${analyticsCSS.sub_sub_img} ${analyticsCSS.amount_img}
                         ${i18n.language === 'en' ? analyticsCSS.amount_img_en : analyticsCSS.amount_img_ar}
                     `} 
-                    src={cartAmountImg} alt="cart amount" 
+                    loading='lazy' src={cartAmountImg} alt="cart amount" 
                 />
 
             </motion.div>

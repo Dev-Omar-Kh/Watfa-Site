@@ -39,6 +39,7 @@ export default function Contact() {
                             {transform: 'translateY(-50%) rotateY(180deg)', right: 0} : 
                             {transform: 'translateY(-50%)', left: 0}
                         }
+                        loading='lazy'
                         className={contactCSS.main_img} src={cartImg} alt="cartImg" 
                     />
 

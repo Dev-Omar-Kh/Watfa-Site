@@ -77,7 +77,7 @@ export default function Help() {
 
                         <div className={helpCSS.img_side}>
 
-                            <img className={helpCSS.main_img} src={card.img} alt={card.title} />
+                            <img loading='lazy' className={helpCSS.main_img} src={card.img} alt={card.title} />
                             <motion.img
                                 variants={repeatVariants} initial='hidden' animate='visible'
                                 className={helpCSS.star_img} src={pinkStarImg} alt="pinkStarImg" 

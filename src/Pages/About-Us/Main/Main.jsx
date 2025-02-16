@@ -72,7 +72,7 @@ export default function Main() {
 
                 <div className={mainCSS.bg_circle}></div>
 
-                <img className={mainCSS.main_img} src={aboutImg} alt="aboutImg" />
+                <img loading='lazy' className={mainCSS.main_img} src={aboutImg} alt="aboutImg" />
 
             </motion.div>
 

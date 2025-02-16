@@ -64,13 +64,13 @@ export default function About() {
                 <div className={aboutCSS.img_cont}>
 
                     <div className={aboutCSS.img_bg}>
-                        <img className={aboutCSS.main_img} src={aboutImg} alt="about" />
+                        <img className={aboutCSS.main_img} loading='lazy' src={aboutImg} alt="about" />
                     </div>
 
                     {[1, 2, 3].map(star => 
                         <motion.img 
                             key={star} 
-                            src={star1} alt={star} 
+                            loading='lazy' src={star1} alt={star} 
                             className={`${aboutCSS.stars} ${aboutCSS[`star_${star}`]}`} 
                             variants={starVariants[star-1]} initial='hidden' animate='visible'
                         />

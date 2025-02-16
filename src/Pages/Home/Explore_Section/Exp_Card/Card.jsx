@@ -48,7 +48,7 @@ export default function Card({contWidth, data}) {
 
         <div style={{width: cardWidth ,height: cardWidth}} className={cardCSS.container}>
 
-            <img src={data.img} alt={'test'} />
+            <img loading='lazy' src={data.img} alt={'test'} />
 
             <div className={cardCSS.content_side}>
                 <p>{data.title}</p>

@@ -86,15 +86,15 @@ export default function Main() {
                 <motion.div variants={Variants.parentVariants} className={mainCSS.download_app_cont}>
 
                     <motion.a variants={Variants.toTopVariants} href="https://www.apple.com/eg/app-store/" target='_blank' rel="noreferrer">
-                        <img src={appStore} alt="app store link" />
+                        <img loading='lazy' src={appStore} alt="app store link" />
                     </motion.a>
 
                     <motion.a variants={Variants.toTopVariants} href="https://play.google.com/store/games?hl=en" target='_blank' rel="noreferrer">
-                        <img src={googlePlay} alt="google play link" />
+                        <img loading='lazy' src={googlePlay} alt="google play link" />
                     </motion.a>
 
                     <motion.a variants={Variants.toTopVariants} href="https://appgallery.huawei.com/Featured" target='_blank' rel="noreferrer">
-                        <img src={appGalleryImg} alt="app gallery link" />
+                        <img loading='lazy' src={appGalleryImg} alt="app gallery link" />
                     </motion.a>
 
                 </motion.div>
@@ -110,35 +110,35 @@ export default function Main() {
                     <motion.img
                         className={`${mainCSS.basket_img} ${isEnglish ? mainCSS.basket_img_en : mainCSS.basket_img_ar}`}
                         variants={repeatBasketVariants} initial='hidden' animate='visible'
-                        src={basketImg} alt="small basket" 
+                        loading='lazy' src={basketImg} alt="small basket" 
                     />
 
                     <motion.img 
                         className={mainCSS.f_star}
                         variants={fRepeatStarVariants} initial='hidden' animate='visible'
                         style={isEnglish ? {left: '-0px'} : {right: '-0px'}}
-                        src={starImg} alt="starImg" 
+                        loading='lazy' src={starImg} alt="starImg" 
                     />
 
                     <motion.img 
                         className={mainCSS.s_star} 
                         variants={sRepeatStarVariants} initial='hidden' animate='visible'
                         style={isEnglish ? {right: '-0px'} : {left: '-0px'}}
-                        src={starImg} alt="starImg" 
+                        loading='lazy' src={starImg} alt="starImg" 
                     />
 
                     <motion.img 
                         className={mainCSS.price_box}
                         variants={repeatVariants} initial='hidden' animate='visible'
                         style={isEnglish ? {left: '-0px'} : {right: '-0px'}}
-                        src={mainIncomeCard} alt="mainIncomeCard" 
+                        loading='lazy' src={mainIncomeCard} alt="mainIncomeCard" 
                     />
 
                 </div>
 
                 <motion.img
                     className={`${mainCSS.main_img} ${!isEnglish ? mainCSS.main_img_ar : mainCSS.main_img_en}`}
-                    src={mainImg} alt="main section" 
+                    loading='lazy' src={mainImg} alt="main section" 
                 />
 
             </motion.div>

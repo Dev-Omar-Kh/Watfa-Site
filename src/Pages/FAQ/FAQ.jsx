@@ -56,7 +56,7 @@ export default function FAQ() {
                 <motion.img 
                     variants={Variants.toBottomVariants} 
                     className={`${faqCSS.quote} ${faqCSS.quote_top}`} 
-                    src={quoteImg} alt="quote top" 
+                    loading='lazy' src={quoteImg} alt="quote top" 
                 />
 
                 <Title 
@@ -70,7 +70,7 @@ export default function FAQ() {
                 <motion.img 
                     variants={Variants.toTopVariants}
                     className={`${faqCSS.quote} ${faqCSS.quote_bottom}`} 
-                    src={quoteImg} alt="quote bottom" 
+                    loading='lazy' src={quoteImg} alt="quote bottom" 
                 />
 
             </motion.div>

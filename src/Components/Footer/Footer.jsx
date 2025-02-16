@@ -28,7 +28,7 @@ export default function Footer() {
             <div className={`${footerCSS.common_sec} ${footerCSS.main_sec}`}>
 
                 <Link>
-                    <img src={logo} alt="logo" />
+                    <img loading='lazy' src={logo} alt="logo" />
                 </Link>
 
                 <p>{t('footerMainSentence')}</p>
@@ -65,13 +65,13 @@ export default function Footer() {
                 <div className={footerCSS.img_cont}>
 
                     <a href='https://www.apple.com/eg/app-store/' target='_blank' rel="noreferrer">
-                        <img src={appStoreImg} alt="google play download link" />
+                        <img loading='lazy' src={appStoreImg} alt="google play download link" />
                     </a>
                     <a href='https://play.google.com/store/games?hl=en' target='_blank' rel="noreferrer">
-                        <img src={googlePlayImg} alt="app store download link" />
+                        <img loading='lazy' src={googlePlayImg} alt="app store download link" />
                     </a>
                     <a href='https://appgallery.huawei.com/Featured' target='_blank' rel="noreferrer">
-                        <img src={appGallery} alt="app gallery download link" />
+                        <img loading='lazy' src={appGallery} alt="app gallery download link" />
                     </a>
 
                 </div>

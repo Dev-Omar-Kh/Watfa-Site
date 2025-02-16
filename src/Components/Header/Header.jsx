@@ -55,7 +55,7 @@ export default function Header() {
         <header id='header' className={`${headerCSS.container}`}>
 
             <Link className={headerCSS.logo}>
-                <img src={logo} alt="logo" />
+                <img loading='lazy' src={logo} alt="logo" />
             </Link>
 
             <div id='nav_ph' onClick={hideNavBar} className={headerCSS.nav_ph}>
