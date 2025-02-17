@@ -14,8 +14,8 @@ import cardImg4 from '../../Images/SVG/card_icon_4.svg';
 import cardImg5 from '../../Images/SVG/card_icon_5.svg';
 import cardImg6 from '../../Images/SVG/card_icon_6.svg';
 import linePhoneImg from '../../Images/SVG/line_car_img.svg';
-import termCardImg1 from '../../Images/SVG/term_card_img_1.svg';
-import termCardImg2 from '../../Images/SVG/term_card_img_2.svg';
+// import termCardImg1 from '../../Images/SVG/term_card_img_1.svg';
+// import termCardImg2 from '../../Images/SVG/term_card_img_2.svg';
 import whyImgsSecImg1 from '../../Images/SVG/why_imgs_sec_img_1.svg';
 import whyImgsSecImg2 from '../../Images/SVG/why_imgs_sec_img_2.svg';
 import whyImgsSecImg3 from '../../Images/SVG/why_imgs_sec_img_3.svg';
@@ -86,23 +86,23 @@ export default function Why() {
 
     // ====== term-cards-data ====== //
 
-    const termCardsData = [
+    // const termCardsData = [
 
-        {
-            id: 1,
-            img: termCardImg1,
-            title: t('termCardTitle1'),
-            content: t('termCardDescription1')
-        },
+    //     {
+    //         id: 1,
+    //         img: termCardImg1,
+    //         title: t('termCardTitle1'),
+    //         content: t('termCardDescription1')
+    //     },
 
-        {
-            id: 2,
-            img: termCardImg2,
-            title: t('termCardTitle2'),
-            content: t('termCardDescription2')
-        },
+    //     {
+    //         id: 2,
+    //         img: termCardImg2,
+    //         title: t('termCardTitle2'),
+    //         content: t('termCardDescription2')
+    //     },
 
-    ];
+    // ];
 
     // ====== how-work-data ====== //
 
@@ -212,7 +212,7 @@ export default function Why() {
 
             </motion.div>
 
-            <motion.div 
+            {/* <motion.div 
                 variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
                 viewport={{once: true , amount: 0.1}}
                 className={whyCSS.term_options}
@@ -243,7 +243,7 @@ export default function Why() {
 
                 </div>
 
-            </motion.div>
+            </motion.div> */}
 
             <motion.div 
                 variants={Variants.parentVariants} initial='hidden' whileInView={'visible'}
