@@ -118,6 +118,10 @@ export default function Contact() {
 
                     </div>
 
+                    <div className={contactCSS.privacy_cont}>
+                        <p>{t('privacySentence')} &nbsp; <span>{t('privacyWord')}</span></p>
+                    </div>
+
                     <div className={contactCSS.submit_cont}>
 
                         <button type="submit">{t('submitFormWord')}</button>

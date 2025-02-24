@@ -239,6 +239,28 @@
 
 }
 
+.privacy_cont{
+
+    width: 100%;
+
+}
+
+.privacy_cont p{
+
+    font-size: 1rem;
+    color: var(--black-color);
+    text-align: center;
+
+}
+
+.privacy_cont span{
+
+    font-size: 1rem;
+    text-decoration: underline;
+    color: var(--violet-color);
+
+}
+
 .submit_cont{
 
     width: 100%;
@@ -283,6 +305,12 @@
     .title_p {
 
         font-size: 1rem;
+
+    }
+
+    .privacy_cont p, .privacy_cont span{
+
+        font-size: 0.8rem;
 
     }
 

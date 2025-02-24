@@ -139,6 +139,8 @@
     "emailLabelForm": "Your Email",
     "numLabelForm": "Your Phone number",
     "msgLabelForm": "Your Message",
+    "privacySentence": "We respect your privacy and ensure that your information is protected",
+    "privacyWord": "Privacy Policy",
     "submitFormWord": "Send"
 
 }
